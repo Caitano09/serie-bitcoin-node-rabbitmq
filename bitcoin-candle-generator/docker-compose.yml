@@ -18,4 +18,5 @@ services:
 
 networks:
   rabbitmq_go_net:
+    name: custom_network
     driver: bridge
