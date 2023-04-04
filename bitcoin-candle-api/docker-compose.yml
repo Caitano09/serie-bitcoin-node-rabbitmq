@@ -7,6 +7,14 @@ services:
       - 27017:27017
     volumes:
       - mongodb_data_container:/data/db
+  app:
+    restart: always
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - meu-monguinho
 
 volumes:
   mongodb_data_container:
+  
